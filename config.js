@@ -29,11 +29,7 @@ const CONFIG = {
       driveFolderId: "1llPDDDqN1Mi7-cWUpn9syyv9uQMfxZ0L",
       featuredPhotoIds: [
         "17wi4k6oTIssNJ5536vIJL4jCAqaqiUkr",
-        "1HOrJAIVGQHjVQuScwE7ip3KQiC8ZH_sv",
-        "DRIVE_FILE_ID_3",
-        "DRIVE_FILE_ID_4",
-        "DRIVE_FILE_ID_5",
-        "DRIVE_FILE_ID_6"
+        "1HOrJAIVGQHjVQuScwE7ip3KQiC8ZH_sv"
       ]
     },
     {
