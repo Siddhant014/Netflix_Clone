@@ -70,7 +70,7 @@ const CONFIG = {
       id: "mehendi",
       name: "Mehendi",
       emoji: "🌸",
-      youtubeVideoId: "mLbsrYjEbho",
+      youtubeVideoId: "1okhf7Wl5hM",
       driveFolderId: "1AC3FeT2IvNwpbAgc4kKG7RqwabPbEdOD",
       featuredPhotoIds: [
         "17wi4k6oTIssNJ5536vIJL4jCAqaqiUkr",
