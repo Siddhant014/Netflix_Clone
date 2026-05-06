@@ -188,7 +188,8 @@ function buildFunctionBlocks() {
       pc.className = 'card photo-card';
       const img = imgEl(driveThumb(id), `${fn.name} photo ${i + 1}`);
       pc.appendChild(img);
-      pc.addEventListener('click', () => openLightbox(photos, photos.length - 1));
+      const photoIndex = photos.length - 1;
+      pc.addEventListener('click', () => openLightbox(photos, photoIndex));
       row.appendChild(pc);
     });
   });
