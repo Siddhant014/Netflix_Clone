@@ -111,7 +111,8 @@ fn.featuredPhotoIds.forEach((id, i) => {
   img.alt = `${fn.name} ${i + 1}`;
   img.onerror = () => img.replaceWith(placeholder());
   item.appendChild(img);
-  item.addEventListener('click', () => openLightbox(featuredUrls, featuredUrls.length - 1));
+  const featIndex = featuredUrls.length - 1;
+  item.addEventListener('click', () => openLightbox(featuredUrls, featIndex));
   featuredGrid.appendChild(item);
 });
 
@@ -164,7 +165,8 @@ async function fetchPage() {
       img.loading = 'lazy';
       img.onerror = () => img.replaceWith(placeholder());
       item.appendChild(img);
-      item.addEventListener('click', () => openLightbox(gridPhotos, gridPhotos.length - 1));
+      const photoIndex = gridPhotos.length - 1;
+      item.addEventListener('click', () => openLightbox(gridPhotos, photoIndex));
       photoGrid.appendChild(item);
     });
 

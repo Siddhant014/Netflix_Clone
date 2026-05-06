@@ -247,17 +247,29 @@ a { text-decoration: none; color: inherit; }
 
 .video-card .thumb {
   width: 100%;
-  height: 180px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   object-fit: cover;
   background: var(--bg-secondary);
   display: block;
 }
 
+.video-card {
+  position: relative;
+  aspect-ratio: 3/4;
+}
+
 .video-card .card-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 0.6rem 0.8rem;
   font-size: 0.85rem;
-  color: var(--text-secondary);
-  background: var(--bg-card);
+  color: #fff;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
 }
 
 .video-card .play-icon {
