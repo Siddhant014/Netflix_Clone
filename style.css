@@ -220,8 +220,8 @@ a { text-decoration: none; color: inherit; }
   justify-content: center;
 }
 .scroll-btn:hover { background: var(--accent); border-color: var(--accent); color: #000; }
-.scroll-btn.left { left: 0.5%; }
-.scroll-btn.right { right: 0.5%; }
+.scroll-btn.left { left: -18ox%; }
+.scroll-btn.right { right: -18px; }
 
 /* ── CARDS ── */
 .card {
@@ -271,7 +271,7 @@ a { text-decoration: none; color: inherit; }
 .video-card:hover .play-icon { opacity: 1; }
 
 /* Photo card */
-.photo-card { width: clamp(150px, 18vw, 240px); }
+.photo-card { width: clamp(180px, 18vw, 280px); }
 
 .photo-card img {
   width: 100%;
