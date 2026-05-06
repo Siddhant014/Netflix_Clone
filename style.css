@@ -188,7 +188,10 @@ a { text-decoration: none; color: inherit; }
 .view-all-link:hover { border-color: var(--accent); }
 
 /* ── HORIZONTAL SCROLL ROW ── */
-.scroll-row-wrap { position: relative; }
+.scroll-row-wrap {
+  position: relative;
+  margin: 0 24px;
+}
 
 .scroll-row {
   display: flex;
@@ -220,8 +223,8 @@ a { text-decoration: none; color: inherit; }
   justify-content: center;
 }
 .scroll-btn:hover { background: var(--accent); border-color: var(--accent); color: #000; }
-.scroll-btn.left { left: 0.5%; }
-.scroll-btn.right { right: 0.5%; }
+.scroll-btn.left { left: -18px; }
+.scroll-btn.right { right: -18px; }
 
 /* ── CARDS ── */
 .card {
