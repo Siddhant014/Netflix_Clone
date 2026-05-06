@@ -14,11 +14,11 @@ const CONFIG = {
       driveFolderId: "1pn8n0j1FbFLzK_vzPoYdduLvh8WwJoKB",
       featuredPhotoIds: [
         "1O1NU9BdxjnfAVJ89AnZd2IQmnGfTturd",
-        "1rDG60LrOooSGA9yc-xvn5lmEpOCFUorx",
+        "1fPoy9HcS31eAJXug3rLSrU9uFvfGKIq1",
         "1ojDq0mf6ci3zY_PlQ7dTnW816bWEMvww",
-        "1A2FCmVYB99zDTLdf_ZSLrXsuQ0SWbtqm",
-        "DRIVE_FILE_ID_5",
-        "DRIVE_FILE_ID_6"
+        "1rDG60LrOooSGA9yc-xvn5lmEpOCFUorx",
+        "1QhBe_nDAu7RlQX3sV2pnUwNs_2DnBmfL",
+        "1A2FCmVYB99zDTLdf_ZSLrXsuQ0SWbtqm"
       ]
     },
     {
