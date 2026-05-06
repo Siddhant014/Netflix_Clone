@@ -1,7 +1,7 @@
 const CONFIG = {
   groomName: "Siddhant",
   brideName: "Shreya",
-  weddingDate: "20th Feburary, 2026",
+  weddingDate: "20th February, 2026",
   tagline: "#SiddhantSungShreya",
   googleApiKey: "AIzaSyDPsspSmi8iIO9pWchG6h8m7zbpQwBpgDQ",
 
