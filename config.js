@@ -40,7 +40,7 @@ const CONFIG = {
       id: "reception",
       name: "Reception",
       emoji: "✨",
-      youtubeVideoId: "YOUTUBE_VIDEO_ID",
+      youtubeVideoId: "_yNBspROmf4",
       driveFolderId: "1V0uerERWRtYDsR4lzGFaOEcoRMlbK-wy",
       featuredPhotoIds: [
         "DRIVE_FILE_ID_1",
