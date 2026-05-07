@@ -39,7 +39,12 @@ body {
   background: var(--bg-primary);
   color: var(--text-primary);
   transition: background var(--transition), color var(--transition);
-  overflow: hidden; /* snap container handles scroll */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body.snap-page {
+  overflow: hidden;
 }
 
 img { display: block; max-width: 100%; }

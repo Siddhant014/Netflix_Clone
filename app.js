@@ -39,7 +39,7 @@ if (teaserYtId) {
   teaserTitle.textContent = `${CONFIG.brideName} & ${CONFIG.groomName}`;
   teaserWrap.innerHTML = `
     <iframe
-      src="https://www.youtube.com/embed/${teaserYtId}?rel=0&modestbranding=1"
+      src="https://www.youtube.com/embed/${teaserYtId}?rel=0&modestbranding=1&iv_load_policy=3&disablekb=0&color=white&showinfo=0"
       allow="autoplay; fullscreen"
       allowfullscreen>
     </iframe>`;
@@ -84,7 +84,7 @@ document.getElementById('vm-close').addEventListener('click', closeVideo);
 videoModal.addEventListener('click', e => { if (e.target === videoModal) closeVideo(); });
 
 function openVideo(ytId) {
-  vmFrame.innerHTML = `<iframe src="https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0"
+  vmFrame.innerHTML = `<iframe src="https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&showinfo=0&color=white"
     allow="autoplay; fullscreen" allowfullscreen></iframe>`;
   videoModal.classList.add('open');
 }
