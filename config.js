@@ -44,12 +44,13 @@ const CONFIG = {
       youtubeVideoId: "_yNBspROmf4",
       driveFolderId: "1V0uerERWRtYDsR4lzGFaOEcoRMlbK-wy",
       featuredPhotoIds: [
-        "DRIVE_FILE_ID_1",
-        "DRIVE_FILE_ID_2",
-        "DRIVE_FILE_ID_3",
-        "DRIVE_FILE_ID_4",
-        "DRIVE_FILE_ID_5",
-        "DRIVE_FILE_ID_6"
+        "1DanEf8a_kuc7IqhzW_w4rGUt2MOB-8e2",
+        "1RlENSqhHTI362bJz9GE2RKU2OjjJ7twe",
+        "1O5nBRznB7t4AF24A2CnTgH5lsri80t1q",
+        "1PB0TvB--SbpAsQj2p2GRdp8EHwNEYuvT",
+        "12DjP5CuTOdtOAvZLbueJUxm7nMNQRnYV",
+        "1i8KIv-QC_UtXDH59K_7_S3suUZXW2OiL",
+        "1gZq9Phk7jWF5qDLrj5K3fdV2hjiSFyJf"
       ]
     },
     {
