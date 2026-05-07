@@ -26,30 +26,45 @@ document.getElementById('footer-names').textContent =
   `${CONFIG.brideName} & ${CONFIG.groomName}`;
 document.getElementById('footer-date').textContent = CONFIG.weddingDate;
 
-/* ── HELPERS ── */
-const driveThumb = id =>
-  `https://drive.google.com/thumbnail?id=${id}&sz=w400`;
-const driveImg = id =>
-  `https://lh3.googleusercontent.com/d/${id}`;
-const ytThumb = id =>
-  `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+/* ── TEASER SECTION ── */
+const teaserTitle = document.getElementById('teaser-title');
+const teaserWrap  = document.getElementById('teaser-video-wrap');
 
-function imgEl(src, alt = '', cls = '') {
-  const img = document.createElement('img');
-  img.src = src;
-  img.alt = alt;
-  if (cls) img.className = cls;
-  img.onerror = () => {
-    img.replaceWith(placeholder());
-  };
-  return img;
+// Use first function with a valid YouTube ID as teaser
+const teaserYtId = CONFIG.teaserVideoId && CONFIG.teaserVideoId !== 'YOUR_YOUTUBE_VIDEO_ID'
+  ? CONFIG.teaserVideoId
+  : (CONFIG.functions.find(f => f.youtubeVideoId && f.youtubeVideoId !== 'YOUTUBE_VIDEO_ID') || {}).youtubeVideoId;
+
+if (teaserYtId) {
+  teaserTitle.textContent = `${CONFIG.brideName} & ${CONFIG.groomName}`;
+  teaserWrap.innerHTML = `
+    <iframe
+      src="https://www.youtube.com/embed/${teaserYtId}?rel=0&modestbranding=1"
+      allow="autoplay; fullscreen"
+      allowfullscreen>
+    </iframe>`;
+} else {
+  teaserWrap.innerHTML = `<div class="img-placeholder" style="aspect-ratio:16/9">🎬 Teaser coming soon</div>`;
 }
+
+/* ── HELPERS ── */
+const driveThumb = id => `https://drive.google.com/thumbnail?id=${id}&sz=w400`;
+const driveImg   = id => `https://lh3.googleusercontent.com/d/${id}`;
+const ytThumb    = id => `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
 
 function placeholder() {
   const d = document.createElement('div');
   d.className = 'img-placeholder';
   d.textContent = '📷';
   return d;
+}
+
+function imgEl(src, alt = '') {
+  const img = document.createElement('img');
+  img.src = src;
+  img.alt = alt;
+  img.onerror = () => img.replaceWith(placeholder());
+  return img;
 }
 
 /* ── SCROLL BUTTONS ── */
@@ -64,14 +79,13 @@ document.addEventListener('click', e => {
 
 /* ── VIDEO MODAL ── */
 const videoModal = document.getElementById('video-modal');
-const vmFrame = document.getElementById('vm-frame');
+const vmFrame    = document.getElementById('vm-frame');
 document.getElementById('vm-close').addEventListener('click', closeVideo);
 videoModal.addEventListener('click', e => { if (e.target === videoModal) closeVideo(); });
 
 function openVideo(ytId) {
-  vmFrame.innerHTML =
-    `<iframe src="https://www.youtube.com/embed/${ytId}?autoplay=1"
-      allow="autoplay; fullscreen" allowfullscreen></iframe>`;
+  vmFrame.innerHTML = `<iframe src="https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0"
+    allow="autoplay; fullscreen" allowfullscreen></iframe>`;
   videoModal.classList.add('open');
 }
 
@@ -81,8 +95,8 @@ function closeVideo() {
 }
 
 /* ── LIGHTBOX ── */
-const lightbox = document.getElementById('lightbox');
-const lbImg = document.getElementById('lb-img');
+const lightbox  = document.getElementById('lightbox');
+const lbImg     = document.getElementById('lb-img');
 const lbCounter = document.getElementById('lb-counter');
 let lbPhotos = [], lbIndex = 0;
 
@@ -96,12 +110,11 @@ document.addEventListener('keydown', e => {
     if (videoModal.classList.contains('open') && e.key === 'Escape') closeVideo();
     return;
   }
-  if (e.key === 'ArrowLeft') showLb(lbIndex - 1);
+  if (e.key === 'ArrowLeft')  showLb(lbIndex - 1);
   if (e.key === 'ArrowRight') showLb(lbIndex + 1);
-  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'Escape')     closeLightbox();
 });
 
-// Swipe support
 let tsX = 0;
 lightbox.addEventListener('touchstart', e => { tsX = e.touches[0].clientX; }, { passive: true });
 lightbox.addEventListener('touchend', e => {
@@ -141,7 +154,6 @@ function buildVideosRow() {
     card.addEventListener('click', () => openVideo(fn.youtubeVideoId));
     row.appendChild(card);
   });
-
 }
 
 /* ── BUILD FUNCTION BLOCKS ── */
@@ -153,16 +165,14 @@ function buildFunctionBlocks() {
     section.className = 'section';
     section.id = `fn-${fn.id}`;
 
-    // Header
     const header = document.createElement('div');
     header.className = 'section-header';
     header.innerHTML = `
       <h2 class="section-title">
-        <span class="emoji">${fn.emoji}</span>${fn.name}
+        <span class="section-emoji">${fn.emoji}</span>${fn.name}
       </h2>
       <a href="function.html?id=${fn.id}" class="view-all-link">View All →</a>`;
 
-    // Scroll row
     const wrap = document.createElement('div');
     wrap.className = 'scroll-row-wrap';
     const rowId = `row-${fn.id}`;
@@ -175,11 +185,9 @@ function buildFunctionBlocks() {
     section.appendChild(wrap);
     container.appendChild(section);
 
-    // Populate row
     const row = document.getElementById(rowId);
-    const photos = []; // full-res URLs for lightbox
+    const photos = [];
 
-    // Featured photo cards
     fn.featuredPhotoIds.forEach((id, i) => {
       if (!id || id.startsWith('DRIVE_FILE_ID')) return;
       const fullUrl = driveImg(id);

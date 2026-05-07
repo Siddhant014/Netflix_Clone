@@ -11,42 +11,70 @@
   <!-- THEME TOGGLE -->
   <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg">
-      <!-- Replace src with your hero image path -->
-      <img id="hero-img" src="assets/hero.JPG" alt="" onerror="this.style.display='none'" />
-    </div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="hero-names" id="hero-names"></h1>
-      <p class="hero-date" id="hero-date"></p>
-      <p class="hero-tagline" id="hero-tagline"></p>
-    </div>
-    <div class="scroll-hint">Scroll</div>
-  </section>
+  <!-- SNAP CONTAINER -->
+  <div id="snap-container">
 
-  <!-- VIDEOS ROW -->
-  <section class="section" id="videos-section">
-    <div class="section-header">
-      <h2 class="section-title">🎬 Our Story — Videos</h2>
-    </div>
-    <div class="scroll-row-wrap">
-      <button class="scroll-btn left" data-target="videos-row">&#8249;</button>
-      <div class="scroll-row" id="videos-row"></div>
-      <button class="scroll-btn right" data-target="videos-row">&#8250;</button>
-    </div>
-  </section>
+    <!-- SNAP 1: HERO -->
+    <section class="snap-section hero" id="hero-section">
+      <div class="hero-bg">
+        <img id="hero-img" src="assets/hero.JPG" alt="" onerror="this.style.display='none'" />
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-eyebrow">A Wedding Story</div>
+        <h1 class="hero-names" id="hero-names"></h1>
+        <div class="hero-divider"><span></span><span class="diamond">◆</span><span></span></div>
+        <p class="hero-date" id="hero-date"></p>
+        <p class="hero-tagline" id="hero-tagline"></p>
+      </div>
+      <div class="scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
 
-  <!-- FUNCTION SECTIONS — injected by app.js -->
-  <div id="functions-container"></div>
+    <!-- SNAP 2: TEASER -->
+    <section class="snap-section teaser-section" id="teaser-section">
+      <div class="teaser-content">
+        <div class="teaser-label">✦ Our Wedding Teaser ✦</div>
+        <h2 class="teaser-title" id="teaser-title"></h2>
+        <div class="teaser-video-wrap" id="teaser-video-wrap"></div>
+        <div class="scroll-hint" style="position:relative;bottom:auto;left:auto;transform:none;margin-top:2rem;">
+          <span>Continue</span>
+          <div class="scroll-line"></div>
+        </div>
+      </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-names" id="footer-names"></div>
-    <div id="footer-date"></div>
-    <div style="margin-top:0.5rem">Made with ❤️</div>
-  </footer>
+    <!-- SNAP 3: MAIN CONTENT (scrollable internally) -->
+    <section class="snap-section content-section" id="content-section">
+
+      <div class="section" id="videos-section">
+        <div class="section-header">
+          <h2 class="section-title">
+            <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f3ac/512.gif" class="hd-emoji" alt="🎬">
+            Our Story — Videos
+          </h2>
+        </div>
+        <div class="scroll-row-wrap">
+          <button class="scroll-btn left" data-target="videos-row">&#8249;</button>
+          <div class="scroll-row" id="videos-row"></div>
+          <button class="scroll-btn right" data-target="videos-row">&#8250;</button>
+        </div>
+      </div>
+
+      <div id="functions-container"></div>
+
+      <footer>
+        <div class="footer-ornament">◆ ◆ ◆</div>
+        <div class="footer-names" id="footer-names"></div>
+        <div id="footer-date"></div>
+        <div class="footer-credit">Made with ❤️</div>
+      </footer>
+
+    </section>
+
+  </div>
 
   <!-- VIDEO MODAL -->
   <div id="video-modal" role="dialog" aria-modal="true">

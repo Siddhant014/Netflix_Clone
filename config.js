@@ -3,6 +3,7 @@ const CONFIG = {
   brideName: "Shreya",
   weddingDate: "20th February, 2026",
   tagline: "#SiddhantSungShreya",
+  teaserVideoId: "sbHlzMOgCmc", 
   googleApiKey: "AIzaSyDPsspSmi8iIO9pWchG6h8m7zbpQwBpgDQ",
 
   functions: [
@@ -13,17 +14,17 @@ const CONFIG = {
       youtubeVideoId: "sbHlzMOgCmc",
       driveFolderId: "1pn8n0j1FbFLzK_vzPoYdduLvh8WwJoKB",
       featuredPhotoIds: [
-        "1O1NU9BdxjnfAVJ89AnZd2IQmnGfTturd",
-        "1fPoy9HcS31eAJXug3rLSrU9uFvfGKIq1",
-        "1ojDq0mf6ci3zY_PlQ7dTnW816bWEMvww",
-        "1rDG60LrOooSGA9yc-xvn5lmEpOCFUorx",
-        "1QhBe_nDAu7RlQX3sV2pnUwNs_2DnBmfL",
-        "1A2FCmVYB99zDTLdf_ZSLrXsuQ0SWbtqm"
+        "DRIVE_FILE_ID_1",
+        "DRIVE_FILE_ID_2",
+        "DRIVE_FILE_ID_3",
+        "DRIVE_FILE_ID_4",
+        "DRIVE_FILE_ID_5",
+        "DRIVE_FILE_ID_6"
       ]
     },
     {
       id: "haldi",
-      name: "Haldi",
+      name: "Haldi",  
       emoji: "🙏",
       youtubeVideoId: "oDshDF_Nw8s",
       driveFolderId: "1m1aobpfRkv98n9qrz8EFHiwa0yICIh5v",
@@ -40,7 +41,7 @@ const CONFIG = {
       id: "reception",
       name: "Reception",
       emoji: "✨",
-      youtubeVideoId: "_yNBspROmf4",
+      youtubeVideoId: "YOUTUBE_VIDEO_ID",
       driveFolderId: "1V0uerERWRtYDsR4lzGFaOEcoRMlbK-wy",
       featuredPhotoIds: [
         "DRIVE_FILE_ID_1",
@@ -55,8 +56,8 @@ const CONFIG = {
       id: "shaadi",
       name: "Shaadi",
       emoji: "📷",
-      youtubeVideoId: "9Baoius7ZvY",
-      driveFolderId: "167l4XVSOlMxFFExj-e1lx0Xb9Y6GWqPN",
+      youtubeVideoId: "YOUTUBE_VIDEO_ID",
+      driveFolderId: "folders/167l4XVSOlMxFFExj-e1lx0Xb9Y6GWqPN",
       featuredPhotoIds: [
         "DRIVE_FILE_ID_1",
         "DRIVE_FILE_ID_2",
@@ -70,7 +71,7 @@ const CONFIG = {
       id: "mehendi",
       name: "Mehendi",
       emoji: "🌸",
-      youtubeVideoId: "1okhf7Wl5hM",
+      youtubeVideoId: "mLbsrYjEbho",
       driveFolderId: "1AC3FeT2IvNwpbAgc4kKG7RqwabPbEdOD",
       featuredPhotoIds: [
         "17wi4k6oTIssNJ5536vIJL4jCAqaqiUkr",
@@ -78,14 +79,14 @@ const CONFIG = {
         "17wi4k6oTIssNJ5536vIJL4jCAqaqiUkr",
         "1HOrJAIVGQHjVQuScwE7ip3KQiC8ZH_sv",
         "17wi4k6oTIssNJ5536vIJL4jCAqaqiUkr",
-        "1HOrJAIVGQHjVQuScwE7ip3KQiC8ZH_sv",
+        "1HOrJAIVGQHjVQuScwE7ip3KQiC8ZH_sv"
       ]
     },
     {
       id: "bhaat",
       name: "Bhaat",
       emoji: "📷",
-      youtubeVideoId: "3-pydckdZWk",
+      youtubeVideoId: "YOUTUBE_VIDEO_ID",
       driveFolderId: "1uJWhgbnDNw_8d2I2ekSjGTf70N9cUC8p",
       featuredPhotoIds: [
         "DRIVE_FILE_ID_1",
