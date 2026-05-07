@@ -3,7 +3,7 @@ const CONFIG = {
   brideName: "Shreya",
   weddingDate: "20th February, 2026",
   tagline: "#SiddhantSungShreya",
-  teaserVideoId: "sbHlzMOgCmc", 
+  teaserVideoId: "sbHlzMOgCmc",
   googleApiKey: "AIzaSyDPsspSmi8iIO9pWchG6h8m7zbpQwBpgDQ",
 
   functions: [
@@ -74,12 +74,12 @@ const CONFIG = {
       youtubeVideoId: "1okhf7Wl5hM",
       driveFolderId: "1AC3FeT2IvNwpbAgc4kKG7RqwabPbEdOD",
       featuredPhotoIds: [
-        "17wi4k6oTIssNJ5536vIJL4jCAqaqiUkr",
+        "1OMRBOn-2kCgmyo7u8-9kBEQtpS-5C7-H",
         "1HOrJAIVGQHjVQuScwE7ip3KQiC8ZH_sv",
-        "17wi4k6oTIssNJ5536vIJL4jCAqaqiUkr",
-        "1HOrJAIVGQHjVQuScwE7ip3KQiC8ZH_sv",
-        "17wi4k6oTIssNJ5536vIJL4jCAqaqiUkr",
-        "1HOrJAIVGQHjVQuScwE7ip3KQiC8ZH_sv",
+        "1wZm6Y1DssVKaopwAo_shp27ZXXdTMYuP",
+        "1VtwpKed9aHB5mvFRdlgW7MvJmBV8mLg_",
+        "1rhtargDB6GaMtULllF5eZr5P1ki4YI5p",
+        "1267liV3RPdvGD9_RHQvqHJOpofA1zIgp",
       ]
     },
     {
@@ -89,12 +89,12 @@ const CONFIG = {
       youtubeVideoId: "3-pydckdZWk",
       driveFolderId: "1uJWhgbnDNw_8d2I2ekSjGTf70N9cUC8p",
       featuredPhotoIds: [
-        "DRIVE_FILE_ID_1",
-        "DRIVE_FILE_ID_2",
-        "DRIVE_FILE_ID_3",
-        "DRIVE_FILE_ID_4",
-        "DRIVE_FILE_ID_5",
-        "DRIVE_FILE_ID_6"
+        "1-Sqgi6WOIhOVC7JG-2VZbgBO7HFWCn8w",
+        "1cqkopEuXMBGZvripQ0GwZEteTORHp9-e",
+        "1gszoijnLKwfx3V_7nnwXa4BdqmVntap7",
+        "1oCqthODCb6GEGPKr0AErEXepKdmrmVNe",
+        "14n-cOBTMumTAxm1JUqnX1029XUeANRVY",
+        "1kREmu9cVv-sZ8nNvOgtA6VKw4nrK4XZq"
       ]
     }
   ]
