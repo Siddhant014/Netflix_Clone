@@ -10,7 +10,7 @@ const CONFIG = {
     {
       id: "sangeet",
       name: "Sangeet",
-      emoji: "💃",
+      emoji: "✨",
       youtubeVideoId: "sbHlzMOgCmc",
       driveFolderId: "1pn8n0j1FbFLzK_vzPoYdduLvh8WwJoKB",
       featuredPhotoIds: [
@@ -25,7 +25,7 @@ const CONFIG = {
     {
       id: "haldi",
       name: "Haldi",
-      emoji: "🙏",
+      emoji: "✨",
       youtubeVideoId: "oDshDF_Nw8s",
       driveFolderId: "1m1aobpfRkv98n9qrz8EFHiwa0yICIh5v",
       featuredPhotoIds: [
@@ -56,7 +56,7 @@ const CONFIG = {
     {
       id: "shaadi",
       name: "Shaadi",
-      emoji: "📷",
+      emoji: "✨",
       youtubeVideoId: "9Baoius7ZvY",
       driveFolderId: "167l4XVSOlMxFFExj-e1lx0Xb9Y6GWqPN",
       featuredPhotoIds: [
@@ -71,7 +71,7 @@ const CONFIG = {
     {
       id: "bhaat",
       name: "Bhaat",
-      emoji: "📷",
+      emoji: "✨",
       youtubeVideoId: "3-pydckdZWk",
       driveFolderId: "1uJWhgbnDNw_8d2I2ekSjGTf70N9cUC8p",
       featuredPhotoIds: [
@@ -86,7 +86,7 @@ const CONFIG = {
     {
       id: "mehendi",
       name: "Mehendi",
-      emoji: "🌸",
+      emoji: "✨",
       youtubeVideoId: "1okhf7Wl5hM",
       driveFolderId: "1AC3FeT2IvNwpbAgc4kKG7RqwabPbEdOD",
       featuredPhotoIds: [
@@ -96,6 +96,20 @@ const CONFIG = {
         "1267liV3RPdvGD9_RHQvqHJOpofA1zIgp",
         "1rhtargDB6GaMtULllF5eZr5P1ki4YI5p",
         "1PrEjCisIvODK3hIgPGt3_6KlRdGoeBMw",
+      ]
+    },
+    {
+      id: "geet",
+      name: "Geet",
+      emoji: "✨",
+      youtubeVideoId: "NA",
+      driveFolderId: "1_7QQeqZR6GA50XMDHyceCI0-azItBQ9Q",
+      featuredPhotoIds: [
+        "1uQ1KEFr1pZd0SSxBE11FsYab-T9dKSK5",
+        "1srEFt2OrSz9lELMrgG3cFMDT0g3e0x-a",
+        "1TJIK_epa4rx6QCsECEcKMICVEif8oRWq",
+        "1s1D4dcctCS5Ju1jGbV9cMkadrIMo-Wvj",
+        "1zmcZbJthWG-qmqn2PK47FZ5PvdMMHGGZ"
       ]
     }
   ]

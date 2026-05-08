@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Videos — Wedding</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { overflow-y: auto; }
+    .videos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+      padding: 1.5rem 4%;
+    }
+    .video-grid-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      cursor: pointer;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .video-grid-card:hover {
+      transform: scale(1.02) translateY(-2px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.2);
+    }
+    .video-grid-card .thumb-wrap {
+      position: relative;
+      aspect-ratio: 16/9;
+    }
+    .video-grid-card .thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .video-grid-card .play-icon {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.3);
+      opacity: 0;
+      transition: opacity var(--transition);
+      font-size: 3rem;
+    }
+    .video-grid-card:hover .play-icon { opacity: 1; }
+    .video-grid-card .card-info {
+      padding: 0.8rem 1rem;
+    }
+    .video-grid-card .card-info h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+
+  <div class="fn-hero">
+    <button class="fn-back" onclick="history.back()">← Back</button>
+    <h1 class="fn-title">🎬 All Videos</h1>
+    <div style="width:60px"></div>
+  </div>
+
+  <div class="videos-grid" id="videos-grid"></div>
+
+  <footer>
+    <div class="footer-ornament">◆ ◆ ◆</div>
+    <div class="footer-names" id="footer-names"></div>
+    <div id="footer-date"></div>
+    <div class="footer-credit">Made with ❤️</div>
+  </footer>
+
+  <!-- VIDEO MODAL -->
+  <div id="video-modal" role="dialog" aria-modal="true">
+    <div class="video-modal-inner">
+      <button id="vm-close" aria-label="Close video">✕</button>
+      <div id="vm-frame"></div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script>
+    /* ── THEME ── */
+    const root = document.documentElement;
+    const toggleBtn = document.getElementById('theme-toggle');
+    function setTheme(t) {
+      root.setAttribute('data-theme', t);
+      toggleBtn.textContent = t === 'dark' ? '🌙' : '☀️';
+      localStorage.setItem('theme', t);
+    }
+    setTheme(localStorage.getItem('theme') || 'dark');
+    toggleBtn.addEventListener('click', () =>
+      setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark')
+    );
+
+    /* ── FOOTER ── */
+    document.getElementById('footer-names').textContent =
+      `${CONFIG.brideName} & ${CONFIG.groomName}`;
+    document.getElementById('footer-date').textContent = CONFIG.weddingDate;
+
+    /* ── VIDEO MODAL ── */
+    const videoModal = document.getElementById('video-modal');
+    const vmFrame    = document.getElementById('vm-frame');
+    document.getElementById('vm-close').addEventListener('click', closeVideo);
+    videoModal.addEventListener('click', e => { if (e.target === videoModal) closeVideo(); });
+    document.addEventListener('keydown', e => {
+      if (videoModal.classList.contains('open') && e.key === 'Escape') closeVideo();
+    });
+
+    function openVideo(ytId) {
+      vmFrame.innerHTML = `<iframe src="https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&showinfo=0"
+        allow="autoplay; fullscreen" allowfullscreen></iframe>`;
+      videoModal.classList.add('open');
+    }
+    function closeVideo() {
+      videoModal.classList.remove('open');
+      vmFrame.innerHTML = '';
+    }
+
+    /* ── BUILD VIDEOS GRID ── */
+    const grid = document.getElementById('videos-grid');
+    CONFIG.functions.forEach(fn => {
+      if (!fn.youtubeVideoId || fn.youtubeVideoId === 'YOUTUBE_VIDEO_ID') return;
+      const card = document.createElement('div');
+      card.className = 'video-grid-card';
+      card.innerHTML = `
+        <div class="thumb-wrap">
+          <img src="https://img.youtube.com/vi/${fn.youtubeVideoId}/hqdefault.jpg"
+            alt="${fn.name}" onerror="this.style.background='var(--bg-secondary)'" />
+          <div class="play-icon">▶</div>
+        </div>
+        <div class="card-info">
+          <h3>${fn.emoji} ${fn.name}</h3>
+        </div>`;
+      card.addEventListener('click', () => openVideo(fn.youtubeVideoId));
+      grid.appendChild(card);
+    });
+  </script>
+</body>
+</html>
