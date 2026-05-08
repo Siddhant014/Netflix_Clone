@@ -109,7 +109,8 @@ const CONFIG = {
         "1srEFt2OrSz9lELMrgG3cFMDT0g3e0x-a",
         "1TJIK_epa4rx6QCsECEcKMICVEif8oRWq",
         "1s1D4dcctCS5Ju1jGbV9cMkadrIMo-Wvj",
-        "1zmcZbJthWG-qmqn2PK47FZ5PvdMMHGGZ"
+        "1zmcZbJthWG-qmqn2PK47FZ5PvdMMHGGZ",
+        "1ngVnRakb5UutUm1z28xXDulJk8be2rYO"
       ]
     }
   ]
