@@ -3,7 +3,7 @@ const CONFIG = {
   brideName: "Shreya",
   weddingDate: "20th February, 2026",
   tagline: "#SiddhantSungShreya",
-  teaserVideoId: "sbHlzMOgCmc",
+  teaserVideoId: "dFAu_aApJwU",
   googleApiKey: "AIzaSyDPsspSmi8iIO9pWchG6h8m7zbpQwBpgDQ",
 
   functions: [
