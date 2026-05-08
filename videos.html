@@ -121,6 +121,26 @@
       videoModal.classList.remove('open');
       vmFrame.innerHTML = '';
     }
+    /* ── TEASER TILE ── */
+
+    const teaserYtId = CONFIG.teaserVideoId &&
+    CONFIG.teaserVideoId !== 'YOUR_YOUTUBE_VIDEO_ID'
+    ? CONFIG.teaserVideoId : null;
+
+    if (teaserYtId) {
+    const tCard = document.createElement('div');
+    tCard.className = 'video-grid-card';
+    tCard.innerHTML = `
+        <div class="thumb-wrap">
+        <img src="https://img.youtube.com/vi/${teaserYtId}/hqdefault.jpg" alt="Wedding Teaser" />
+        <div class="play-icon">▶</div>
+        </div>
+        <div class="card-info">
+        <h3>✨ Wedding Teaser</h3>
+        </div>`;
+    tCard.addEventListener('click', () => openVideo(teaserYtId));
+    grid.appendChild(tCard);
+    }
 
     /* ── BUILD VIDEOS GRID ── */
     const grid = document.getElementById('videos-grid');
@@ -140,6 +160,7 @@
       card.addEventListener('click', () => openVideo(fn.youtubeVideoId));
       grid.appendChild(card);
     });
+    
   </script>
 </body>
 </html>

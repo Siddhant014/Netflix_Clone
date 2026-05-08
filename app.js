@@ -197,6 +197,7 @@ function buildFunctionBlocks() {
       const pc = document.createElement('div');
       pc.className = 'card photo-card';
       const img = imgEl(driveThumb(id), `${fn.name} photo ${i + 1}`);
+      img.loading = 'lazy';
       pc.appendChild(img);
       const photoIndex = photos.length - 1;
       pc.addEventListener('click', () => openLightbox(photos, photoIndex));

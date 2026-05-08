@@ -32,7 +32,8 @@ if (!fn) { window.location.href = 'index.html'; }
 
 /* ── STATIC CONTENT ── */
 document.getElementById('page-title').textContent  = `${fn.name} — Wedding`;
-document.getElementById('fn-title').textContent    = `${fn.emoji} ${fn.name}`;
+document.getElementById('fn-title').innerHTML =
+  `<span class="fn-emoji">${fn.emoji}</span> ${fn.name}`;
 document.getElementById('footer-names').textContent =
   `${CONFIG.brideName} & ${CONFIG.groomName}`;
 document.getElementById('footer-date').textContent = CONFIG.weddingDate;
